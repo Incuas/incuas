@@ -802,7 +802,7 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
       <p>Compila il modulo e carica il tuo curriculum.</p>
     </div>
 
-    <form id="jobApplicationForm" class="p-4 shadow-sm bg-white" netlify method="post" enctype="multipart/form-data">
+    <form id="jobApplicationForm" name="job-applications" class="p-4 shadow-sm bg-white" data-netlify="true" method="POST" enctype="multipart/form-data">
 
       <div class="row g-3">
 
@@ -830,6 +830,8 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
           <label class="form-label">Carica il tuo Curriculum</label>
           <input type="file" name="resume" class="form-control">
         </div>
+
+        <input type="hidden" name="form-name" value="job-applications" />
 
         <div class="col-12 text-center mt-3">
           <button type="submit" class="btn btn-success px-5">
