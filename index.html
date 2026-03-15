@@ -1376,7 +1376,7 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" id="contactForm" name="contactfrom" data-netlify="true" method="POST" enctype="multipart/form-data">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -1394,6 +1394,8 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
+
+                <input type="hidden" name="form-name" value="contactForm" />
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
