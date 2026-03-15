@@ -1653,6 +1653,10 @@ section,
   margin-top: 40px;
 }
 
+.info-item {
+  align-items: center;
+}
+
 .contact .info-item i {
   color: var(--contrast-color);
   background: var(--accent-color);
