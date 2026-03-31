@@ -6,6 +6,43 @@
 * License: https://bootstrapmade.com/license/
 */
 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("cookieModal");
+  const acceptBtn = document.getElementById("acceptBtn");
+  const rejectBtn = document.getElementById("rejectBtn");
+
+  // Check if the user has already made a choice
+  // localStorage.removeItem("cookieConsent");
+  const userConsent = localStorage.getItem("cookieConsent");
+
+  if (!userConsent) {
+    // If no choice is found, show the modal
+    modal.style.display = "flex";
+  }
+
+  // Handle Accept
+  acceptBtn.addEventListener("click", () => {
+    // Save preference
+    localStorage.setItem("cookieConsent", "accepted");
+    // Hide modal
+    modal.style.display = "none";
+    
+    // Add your tracking/analytics scripts here
+    console.log("Cookies accepted! Loading analytics...");
+  });
+
+  // Handle Reject
+  rejectBtn.addEventListener("click", () => {
+    // Save preference
+    localStorage.setItem("cookieConsent", "rejected");
+    // Hide modal
+    modal.style.display = "none";
+    
+    // Ensure tracking scripts remain disabled
+    console.log("Cookies rejected. Analytics disabled.");
+  });
+});
+
 (function() {
   "use strict";
 
