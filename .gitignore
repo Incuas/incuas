@@ -1,0 +1,5 @@
+# Dependency folder (thousands of tiny files)
+node_modules/
+
+# The built website (automatically generated)
+# _site/
