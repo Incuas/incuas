@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/Incuas.png" rel="icon">
-  <link href="assets/img/Incuas.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/favicon.jpg" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -91,8 +91,8 @@ window.addEventListener("load", function () {
                 <li><a href="index.html#service3">C-DOM/ADI</a></li>
               </ul>
             </li>
-            <li><a href="index.html#why-us"> Perche noi</a></li>
             <li><a href="index.html#jobs">Lavora Con Noi</a></li>
+            <li><a href="index.html#why-us"> Perche noi</a></li>
             <!-- <li><a href="index.html#apply for a job">Candidati per una Posizione</a></li> -->
             <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
@@ -141,10 +141,10 @@ window.addEventListener("load", function () {
         <div class="content row gy-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <h3>Perché Scegliere Incuas?</h3>
-              <p>
-                Scegliere Incuas significa affidarsi a un partner solido, affidabile e profondamente radicato nei valori della cura e dell'eccellenza.  
-                Ecco i quattro pilastri che ci distinguono nel settore sanitario e assistenziale.
+              <h3>INCUAS</h3>
+              <p style="line-height: 2; text-align: justify;">
+                
+Guidati dal valore etico, il nostro team di giovani professionisti garantisce soluzioni chiavi in mano. Un unico referente per un'assistenza dinamica, innovativa e di eccellenza per il benessere degli assistiti.
               </p>
               <div class="text-center">
                 <a href="#why-us" class="more-btn"><span>Scopri di più</span> <i class="bi bi-chevron-right"></i></a>
@@ -161,7 +161,7 @@ window.addEventListener("load", function () {
         <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
           <i class="bi bi-hospital"></i>
           <h4>Opportunità di Lavoro</h4>
-          <p>
+          <p style="line-height: 1.8; text-align: justify;">
             Collaboriamo con ospedali, cliniche e RSA
             in tutta l'italia offrendo opportunità di lavoro per
             infermieri e professionisti sanitari qualificati.
@@ -174,7 +174,7 @@ window.addEventListener("load", function () {
         <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
           <i class="bi bi-person-check"></i>
           <h4>Processo di Selezione</h4>
-          <p>
+          <p style="line-height: 1.8; text-align: justify;">
             Il nostro team guida i candidati attraverso ogni fase
             del processo di selezione, dalla candidatura iniziale
             fino all’inserimento nelle strutture partner.
@@ -187,7 +187,7 @@ window.addEventListener("load", function () {
         <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
           <i class="bi bi-globe"></i>
           <h4>Supporto 24/7 </h4>
-          <p>
+          <p style="line-height: 1.8; text-align: justify;">
             Offriamo supporto completo ai professionisti sanitari
             su tutto il territorio, inclusi assistenza per documenti,
             trasferimento e integrazione lavorativa.
@@ -869,7 +869,7 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
         </div>
 
         <div class="col-md-6">
-          <input type="text" id="jobTitle" name="jobTitle" class="form-control" placeholder="Posizione aperta" readonly>
+          <input type="text" id="jobTitle" name="jobTitle" class="form-control" placeholder="POSIZIONE APERTA" readonly>
         </div>
 
         <div class="col-12">
@@ -882,6 +882,15 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
         </div>
 
         <input type="hidden" name="form-name" value="job-applications" />
+
+        <div class="col-12 mt-3 mb-3">
+          <div class="form-check text-start">
+            <input class="form-check-input privacy-check" type="checkbox" value="" id="privacyPolicyCheckJob" required  data-bs-toggle="modal" data-bs-target="#privacyModal">
+            <label class="form-check-label" for="privacyPolicyCheckJob">
+              Accetto il <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">trattamento dei dati personali</a>
+            </label>
+          </div>
+        </div>
 
         <div class="col-12 text-center mt-3">
           <button type="submit" class="btn btn-success px-5">
@@ -906,7 +915,8 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
 
     <div class="section-header" data-aos="fade-up">
       <h2>Perché Noi</h2>
-      <p>Soluzioni sanitarie complete con qualità, trasparenza e professionalità.</p>
+      <p style="line-height: 2;">Soluzioni sanitarie complete con qualità, trasparenza e professionalità.</p>
+      <p style="line-height: 2;">Incuas significa affidarsi a un partner solido, affidabile e profondamente radicato nei valori della cura e dell'eccellenza. Ecco i quattro pilastri che ci distinguono nel settore sanitario e assistenziale.</p>
     </div>
 
     <div class="why-grid">
@@ -1426,23 +1436,23 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
           </div>
 
           <div class="col-lg-8">
-            <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" id="contactForm" name="contactfrom" data-netlify="true" method="POST" enctype="multipart/form-data">
+            <form method="POST" class="php-email-form" id="contactForm" name="contact-from" data-netlify="true">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Nome Cognome" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Nome Cognome" required>
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Mail" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Mail" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Oggetto" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Oggetto" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Messaggio" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Messaggio" required></textarea>
                 </div>
 
                 <input type="hidden" name="form-name" value="contactForm" />
@@ -1464,6 +1474,25 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
       </div>
 
     </section><!-- /Contact Section -->
+
+    <!-- Privacy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyModalLabel">Trattamento dei Dati Personali</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Dichiaro di aver letto l'informativa privacy e acconsento al trattamento dei miei dati personali per dare seguito alla mia richiesta.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="rejectPrivacyBtn" data-bs-dismiss="modal">Rifiuto</button>
+            <button type="button" class="btn btn-primary" id="acceptPrivacyBtn" data-bs-dismiss="modal">Accetto</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
@@ -1534,7 +1563,7 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
         <div class="col-lg-2 col-md-3 footer-links" style="float: end;">
           <h4>Social</h4>
           <div class=" social-links" style="display: flex;">
-            <a href="https://www.instagram.com/incuas_italia?igsh=dmNrMzRjaDlja25s" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/incuas_italia?igsh=M2w2YnlyNHVxcThi&utm_source=qr" target="_blank"><i class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/company/gruppo-incuas" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
@@ -1589,7 +1618,7 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <div id="cookieModal" class="modal-overlay">
+  <!-- <div id="cookieModal" class="modal-overlay">
     <div class="modal-content">
       <h3>Diamo valore alla tua privacy</h3>
       <p>
@@ -1601,7 +1630,7 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
         <button id="acceptBtn" class="btn btn-accept">Accetta</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Vendor JS Files -->
    <script>

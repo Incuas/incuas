@@ -7,18 +7,18 @@
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("cookieModal");
+  // const modal = document.getElementById("cookieModal");
   const acceptBtn = document.getElementById("acceptBtn");
   const rejectBtn = document.getElementById("rejectBtn");
 
   // Check if the user has already made a choice
   // localStorage.removeItem("cookieConsent");
-  const userConsent = localStorage.getItem("cookieConsent");
+  // const userConsent = localStorage.getItem("cookieConsent");
 
-  if (!userConsent) {
-    // If no choice is found, show the modal
-    modal.style.display = "flex";
-  }
+  // if (!userConsent) {
+  //   // If no choice is found, show the modal
+  //   modal.style.display = "flex";
+  // }
 
   // Handle Accept
   acceptBtn.addEventListener("click", () => {
@@ -218,5 +218,61 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Popup and Privacy Checkbox Logic
+   */
+  const privacyCheckboxes = document.querySelectorAll('.privacy-check');
+  const acceptBtn = document.getElementById('acceptPrivacyBtn');
+  const rejectBtn = document.getElementById('rejectPrivacyBtn');
+  let currentCheckbox = null;
+  let accepted = false;
+
+  if (privacyCheckboxes.length > 0) {
+    privacyCheckboxes.forEach(checkbox => {
+      // Remove data-bs-toggle from HTML if it exists so we handle it only via JS
+      checkbox.removeAttribute('data-bs-toggle');
+      checkbox.removeAttribute('data-bs-target');
+
+      checkbox.addEventListener('change', function(e) {
+        currentCheckbox = this;
+        if (this.checked) {
+          const privacyModalEl = document.getElementById('privacyModal');
+          if (privacyModalEl) {
+            const myModal = new bootstrap.Modal(privacyModalEl);
+            myModal.show();
+          }
+        }
+      });
+    });
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => {
+        accepted = true;
+        if (currentCheckbox) {
+          currentCheckbox.checked = true;
+        }
+      });
+    }
+
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', () => {
+        if (currentCheckbox) {
+          currentCheckbox.checked = false;
+        }
+      });
+    }
+    
+    // Uncheck if they close the modal without explicitly accepting
+    const privacyModalEl = document.getElementById('privacyModal');
+    if (privacyModalEl) {
+      privacyModalEl.addEventListener('hidden.bs.modal', function () {
+        if (!accepted && currentCheckbox) {
+          currentCheckbox.checked = false;
+        }
+        accepted = false; // Reset for next time
+      });
+    }
+  }
 
 })();
