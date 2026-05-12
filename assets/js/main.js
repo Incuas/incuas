@@ -234,9 +234,10 @@ document.addEventListener("DOMContentLoaded", () => {
       checkbox.removeAttribute('data-bs-toggle');
       checkbox.removeAttribute('data-bs-target');
 
-      checkbox.addEventListener('change', function(e) {
-        currentCheckbox = this;
+      checkbox.addEventListener('change', function() {
+        // Open the modal only when the checkbox is checked.
         if (this.checked) {
+          currentCheckbox = this;
           const privacyModalEl = document.getElementById('privacyModal');
           if (privacyModalEl) {
             const myModal = new bootstrap.Modal(privacyModalEl);

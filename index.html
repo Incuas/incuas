@@ -755,8 +755,14 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
             </div>
 
             <div class="col-md-6">
-              <input type="text" id="jobTitle" name="jobTitle" class="form-control" placeholder="Posizione Aperta"
-                readonly>
+              <select id="jobTitle" name="jobTitle" class="form-control" required>
+                <option value="" disabled selected>Seleziona una posizione</option>
+                <option value="Medico">Medico</option>
+                <option value="Infermiere">Infermiere</option>
+                <option value="OSS/ASA">OSS/ASA</option>
+                <option value="Fisioterapista">Fisioterapista</option>
+                <option value="Fisiatra">Fisiatra</option>
+              </select>
             </div>
 
             <div class="col-12">
@@ -773,7 +779,7 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
             <div class="col-12 mt-3 mb-3">
               <div class="form-check text-start">
                 <input class="form-check-input privacy-check" type="checkbox" value="" id="privacyPolicyCheckJob"
-                  required data-bs-toggle="modal" data-bs-target="#privacyModal">
+                  required>
                 <label class="form-check-label" for="privacyPolicyCheckJob">
                   Accetto il <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">trattamento dei dati
                     personali</a>
@@ -1350,9 +1356,9 @@ Non solo personale: Incuas è anche il vostro fornitore affidabile per materiali
 
               <div class="col-12 mt-3 mb-3">
                 <div class="form-check text-start">
-                  <input class="form-check-input privacy-check" type="checkbox" value="" id="privacyPolicyCheckJob"
-                    required data-bs-toggle="modal" data-bs-target="#privacyModal">
-                  <label class="form-check-label" for="privacyPolicyCheckJob">
+                  <input class="form-check-input privacy-check" type="checkbox" value="" id="privacyPolicyCheckContact"
+                    required>
+                  <label class="form-check-label" for="privacyPolicyCheckContact">
                     Accetto il <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">trattamento dei dati
                       personali</a>
                   </label>
